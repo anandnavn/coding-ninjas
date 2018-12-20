@@ -1,2 +1,2 @@
 # coding-ninjas
-code compiled while learning competitve programming
+code compiled while learning competitive programming
