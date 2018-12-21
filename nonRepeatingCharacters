@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cstring>
+#include <map>
+using namespace std;
+
+
+char nonRepeatingCharacter(string s){
+  
+	  map<char,int> m;
+	  for(int i=0 ; i<s.length() ; i++){
+	  	m[s[i]] = m[s[i]]+1 ;             //map the elements in the string
+	  }
+	  char req;
+	  
+	  for(int j=0 ; j<s.length() ; j++){
+           
+           if(m[s[j]] == 1){          //check the string in sequence
+             req = s[j];
+                break;        
+           }
+	  	
+	  	}
+	  
+	  if(req == NULL)                //if the string contains only repeating characters
+	    req = s[0];
+	  
+	 return req;
+}
+
+
+
+int main(){
+
+  string str;
+  cin >> str;
+
+  char ch = nonRepeatingCharacter(str);
+
+  cout << ch << endl;
+
+}
